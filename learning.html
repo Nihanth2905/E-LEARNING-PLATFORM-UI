@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Learning Platform</title>
+    <link rel="stylesheet" href="learning.css">
+</head>
+<body>
+
+<header>
+    <h1>E-Learning Platform</h1>
+    <p>Learn Anytime, Anywhere</p>
+</header>
+
+<div class="btn-container">
+    <button onclick="showSection('courses')">Courses</button>
+    <button onclick="showSection('video')">Video</button>
+</div>
+
+<section id="courses" class="section">
+    <h2>Available Courses</h2>
+
+    <div class="course-card">
+        <h3>HTML & CSS Basics</h3>
+        <p>Learn the fundamentals of web development.</p>
+        <div class="progress">
+            <div class="progress-bar" style="width:85%">85%</div>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <h3>JavaScript Essentials</h3>
+        <p>Understand core JavaScript concepts.</p>
+        <div class="progress">
+            <div class="progress-bar" style="width: 75%">75%</div>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <h3>Python Programming</h3>
+        <p>Start coding with Python.</p>
+        <div class="progress">
+            <div class="progress-bar" style="width:50%">50%</div>
+        </div>
+    </div>
+</section>
+
+<section id="video" class="section">
+    <h2>Course Video</h2>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" allowfullscreen></iframe>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 E-Learning Platform</p>
+</footer>
+
+<script>
+function showSection(id) {
+    let sections = document.getElementsByClassName("section");
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+    }
+    document.getElementById(id).style.display = "block";
+}
+showSection('courses');
+</script>
+
+</body>
+</html>
